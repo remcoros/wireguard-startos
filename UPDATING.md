@@ -25,9 +25,3 @@ moving the base image.
    WireGuard, and CA bundle versions. Confirm security updates are present in
    both architectures' final packaged images; a floating tag or `apk add
    --no-cache` does not bypass Docker's build cache.
-3. Bump `startos/versions/current.ts` and write user-facing release notes.
-4. Run `make format`, then `rm -rf javascript && make x86` — the JavaScript
-   build type-checks, runs `npm test`, lints and formats the source first. Build
-   `make arm` as well when refreshing the container.
-5. Verify setup, profile import, handshake, revocation, and backup/restore on a
-   StartOS server.
